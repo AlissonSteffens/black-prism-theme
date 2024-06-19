@@ -1,0 +1,132 @@
+// .theme-light {
+// 	--contrast-color: var(--shadow);
+// 	--default-text-color: var(--shadow);
+// 	--bg-contrast-amount: 70%;
+// 	--fg-contrast-amount: 30%;
+// 	--medium-contrast-amount: 60%;
+// 	--active-contrast-amount: 30%;
+
+// 	--yellow: color-mix(in srgb, #ffd85e 90%, var(--shadow));
+// 	--lime: color-mix(in srgb, #97e768 90%, var(--shadow));
+// 	--mint: color-mix(in srgb, #52eea3 85%, var(--shadow));
+// 	--cyan: color-mix(in srgb, #51e1e9 85%, var(--shadow));
+// 	--cool-cyan: color-mix(in srgb, #43cfea 85%, var(--shadow));
+// 	--light-blue: color-mix(in srgb, #54b6f8 90%, var(--shadow));
+// 	thead {
+// 		background-color: var(--shadow) !important;
+// 		th {
+// 			color: var(--highlight) !important;
+// 		}
+// 	}
+// }
+
+.theme-dark {
+	--contrast-color: var(--highlight);
+	--bg-contrast-amount: 15%;
+	--fg-contrast-amount: 40%;
+	--medium-contrast-amount: 20%;
+	--active-contrast-amount: 30%;
+	thead {
+		background-color: var(--highlight);
+		th {
+			color: var(--shadow) !important;
+		}
+	}
+}
+
+.nav-folder-title {
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+	.nav-file-title,
+	.nav-folder-title {
+		padding-top: 3px !important;
+		padding-right: 5px !important;
+		padding-bottom: 2px !important;
+		padding-left: 15px;
+	}
+}
+
+$colors: (
+	"00": var(--color-red),
+	"01": var(--color-orange),
+	"02": var(--color-yellow),
+	"03": var(--color-green),
+	"04": var(--color-cyan),
+	"05": var(--color-blue),
+	"06": var(--color-purple),
+	"07": var(--color-pink),
+	"99": var(--cool-gray),
+);
+
+@each $index, $color in $colors {
+	.nav-folder-title[data-path^="#{$index}"] {
+		--folder-color: #{$color};
+		color: var(--folder-color);
+		--nav-item-color-hover: color-mix(
+			in srgb,
+			var(--folder-color) var(--fg-contrast-amount),
+			var(--contrast-color)
+		);
+		--nav-item-background-hover: color-mix(
+			in srgb,
+			var(--folder-color) var(--bg-contrast-amount),
+			transparent
+		);
+		--background-modifier-border-focus: color-mix(
+			in srgb,
+			var(--folder-color) 40%,
+			transparent
+		);
+		--nav-collapse-icon-color: color-mix(
+			in srgb,
+			var(--folder-color) 60%,
+			transparent
+		);
+	}
+
+	.nav-folder-title[data-path^="#{$index}"]:hover {
+		--nav-collapse-icon-color: color-mix(
+			in srgb,
+			var(--folder-color) 60%,
+			var(--contrast-color)
+		);
+	}
+
+	.tree-item-children
+		.nav-folder:has(.nav-folder-title[data-path^="#{$index}"]) {
+		--nav-indentation-guide-color: color-mix(
+			in srgb,
+			var(--folder-color) var(--medium-contrast-amount),
+			transparent
+		);
+	}
+
+	.tree-item-children
+		.nav-folder:has(.nav-folder-title[data-path^="#{$index}"])
+		.nav-file-title {
+		color: color-mix(
+			in srgb,
+			var(--folder-color) var(--medium-contrast-amount),
+			var(--default-text-color)
+		);
+		--nav-item-background-hover: color-mix(
+			in srgb,
+			color-mix(in srgb, var(--folder-color) 50%, var(--highlight))
+				var(--bg-contrast-amount),
+			transparent
+		);
+		--background-modifier-border-focus: color-mix(
+			in srgb,
+			var(--folder-color) 40%,
+			transparent
+		);
+		--nav-item-background-active: color-mix(
+			in srgb,
+			white var(--active-contrast-amount),
+			transparent
+		);
+	}
+}

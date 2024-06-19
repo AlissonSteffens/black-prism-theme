@@ -1,0 +1,66 @@
+/* reading mode */
+.markdown-preview-view p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+/* source view and live preview */
+.markdown-source-view.mod-cm6 .cm-line {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+// H1 or cm-header cm-header-1
+h1,
+.HyperMD-header.HyperMD-header-1 {
+	color: var(--highlight);
+	font-size: 30px;
+	padding: 0 !important;
+}
+
+// H2 or cm-header cm-header-2
+h2,
+.HyperMD-header.HyperMD-header-2{
+	color: var(--color-yellow);
+	font-size: 24px;
+	padding: 0 !important;
+}
+
+// H3 or cm-header cm-header-3
+h3,
+.HyperMD-header.HyperMD-header-3{
+	color: var(--color-green);
+	font-size: 20px;
+	padding: 0 !important;
+}
+
+// H4 or cm-header cm-header-4
+h4,
+.HyperMD-header.HyperMD-header-4{
+	color: var(--color-blue);
+	font-size: 16px;
+	padding: 0 !important;
+}
+
+// H5 or cm-header cm-header-5
+h5,
+.HyperMD-header.HyperMD-header-5{
+	color: var(--color-purple);
+	font-size: 14px;
+	padding: 0 !important;
+}
+
+// H6 or cm-header cm-header-6
+h6,
+.HyperMD-header.HyperMD-header-6{
+	color: var(--color-cyan);
+	font-size: 12px;
+	padding: 0 !important;
+}
+
+// p
+p {
+	color: var(--cool-gray);
+	font-size: 16px;
+	padding: 0 !important;
+}

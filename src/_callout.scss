@@ -1,0 +1,12 @@
+.callout {
+	background-color: rgba(var(--callout-color), 0.2);
+}
+.theme-dark {
+	.callout {
+		.callout-content {
+			p {
+				color: var(--highlight) ;
+			}
+		}
+	}
+}

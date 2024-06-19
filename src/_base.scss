@@ -1,0 +1,57 @@
+// Orininal Colors from
+// https://github.com/SakuraIsayekivanilla-amoled-theme
+
+.theme-dark {
+	--color-base-00: #000;
+	--color-base-05: #080808;
+	--color-base-10: #111;
+	--color-base-20: #1a1a1a;
+	--color-base-25: #222;
+	--color-base-30: #333;
+	--color-base-35: #363636;
+	--color-base-40: #4a4a4a;
+	--color-base-50: #666;
+	--color-base-60: #999
+	--color-base-70: #bbb
+	--color-base-100: #fff;
+
+  --color-red: #e9404b;
+  --color-red-rgb: 233, 64, 75;
+
+  --color-orange: #fa9f50;
+  --color-orange-rgb: 250, 159, 80;
+
+  --color-yellow: #ffd85e;
+  --color-yellow-rgb: 255, 216, 94;
+
+  --color-green: #52eea3;
+  --color-green-rgb: 82, 238, 163;
+
+
+  --color-cyan: #51e1e9;
+  --color-cyan-rgb: 81, 225, 233;
+
+  --color-blue: #437cf3;
+  --color-blue-rgb: 67, 124, 243;
+
+  --color-purple: #9446f8;
+  --color-purple-rgb: 148, 70, 248;
+
+  --color-pink: #e54f9b;
+  --color-pink-rgb: 229, 79, 155;
+
+	--background-primary: var(--color-base-00);
+	--background-secondary: var(--color-base-05);
+	--titlebar-background: var(--color-base-00);
+	--titlebar-background-focused: var(--color-base-10);
+}
+
+:root {
+    --cool-gray: #515768;
+  
+    --default-text-color: #d0d0d0;
+    --highlight: #fff;
+    --shadow: #0b0c2c;
+  
+    --nav-item-weight-hover: bold;
+  }
